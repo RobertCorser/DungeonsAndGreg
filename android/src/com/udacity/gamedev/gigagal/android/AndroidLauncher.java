@@ -1,10 +1,11 @@
-package game.greg.dungeons;
+package com.udacity.gamedev.gigagal.android;
 
 import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import game.greg.dungeons.DungeonsAndGreg;
+
+import game.dungeons.greg.DungeonsAndGreg;
 
 public class AndroidLauncher extends AndroidApplication {
 	@Override
