@@ -9,4 +9,5 @@ public class Constant {
 
     public static final String GREG_STANDING_RIGHT = "greg_idle_right";
 
+    public static final String KNIGHT_STANDING_RIGHT= "knight_f_hit_anim_f0";
 }
