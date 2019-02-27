@@ -16,6 +16,7 @@ greg_idle_right
   xy: 36, 24
   size: 32, 36
   orig: 32, 36
+  offset: 0, 0
   index: 1
 greg_idle_right
   rotate: false
