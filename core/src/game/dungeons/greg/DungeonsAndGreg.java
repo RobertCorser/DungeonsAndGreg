@@ -1,14 +1,18 @@
 package game.dungeons.greg;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.assets.AssetManager;
-import com.badlogic.gdx.graphics.GL20;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
-import game.dungeons.greg.util.Assets;
+import com.badlogic.gdx.Game;
 
-public class DungeonsAndGreg extends ApplicationAdapter {
+public class DungeonsAndGreg extends Game {
+    @Override
+    public void create() {
+        setScreen(new GameScreen());
+    }
+}
+
+    /*
+
+    OLD CODE
+
     SpriteBatch batch;
     TextureRegion greg;
     TextureRegion knight;
@@ -27,6 +31,7 @@ public class DungeonsAndGreg extends ApplicationAdapter {
 
     @Override
     public void render () {
+
         Gdx.gl.glClearColor(1, 1, 3, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
@@ -43,3 +48,5 @@ public class DungeonsAndGreg extends ApplicationAdapter {
         batch.dispose();
     }
 }
+*/
+

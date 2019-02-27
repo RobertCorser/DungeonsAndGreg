@@ -1,65 +1,38 @@
 
 dungeonsandgreg.pack.png
+
 size: 512,64
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-greg_idle_right
+greg-idle-right-0
   rotate: false
   xy: 2, 24
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
   index: 0
-greg_idle_right
+greg-idle-right-1
   rotate: false
-  xy: 36, 24
+  xy: 36, 2
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
-  index: 1
-greg_idle_right
+  index: -1
+greg-idle-right-2
   rotate: false
-  xy: 70, 24
+  xy: 70, 2
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
-  index: 2
-greg_idle_right
+  index: -1
+greg-idle-right-3
   rotate: false
-  xy: 104, 24
+  xy: 104, 2
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
-  index: 3
-greg_idle_right
-  rotate: false
-  xy: 138, 24
-  size: 32, 36
-  orig: 32, 36
-  offset: 0, 0
-  index: 4
-greg_idle_right
-  rotate: false
-  xy: 172, 24
-  size: 32, 36
-  orig: 32, 36
-  offset: 0, 0
-  index: 5
-greg_run_right
-  rotate: false
-  xy: 206, 24
-  size: 32, 36
-  orig: 32, 36
-  offset: 0, 0
-  index: 1
-greg_run_right
-  rotate: false
-  xy: 240, 24
-  size: 32, 36
-  orig: 32, 36
-  offset: 0, 0
-  index: 2
+  index: -1
 knight_f_hit_anim_f0
   rotate: false
   xy: 274, 32
@@ -186,3 +159,5 @@ knight_m_run_anim_f3
   orig: 16, 28
   offset: 0, 0
   index: -1
+
+
