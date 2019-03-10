@@ -77,9 +77,9 @@ public class Assets implements Disposable, AssetErrorListener {
         public final AtlasRegion knightStandingRight2;
         public final AtlasRegion knightStandingRight3;
         public final AtlasRegion knightRunningRight0;
-        public final AtlasRegion knightRunningRight0;
-        public final AtlasRegion knightRunningRight0;
-        public final AtlasRegion knightRunningRight0;
+        public final AtlasRegion knightRunningRight1;
+        public final AtlasRegion knightRunningRight2;
+        public final AtlasRegion knightRunningRight3;
         public final AtlasRegion knighthit0;
 
         public KnightAssets(TextureAtlas atlas){
