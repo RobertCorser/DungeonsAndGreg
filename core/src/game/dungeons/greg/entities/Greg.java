@@ -18,7 +18,7 @@ public class Greg {
     }
 
     public void render(SpriteBatch batch){
-        TextureRegion region = Assets.instance.gregAssets.gregStandingRight;
+        TextureRegion region = Assets.instance.gregAssets.gregStandingRight0;
 
         batch.draw(region, position.x, position.y);
     }

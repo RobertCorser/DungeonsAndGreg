@@ -10,6 +10,8 @@ public class Constant {
 
     public static final String TEXTURE_ATLAS = "images/dungeonsandgreg.pack.atlas";
 
+
+    //Greg's Constants
     public static final String GREG_STANDING_RIGHT_0 = "greg-idle-right-0";
     public static final String GREG_STANDING_RIGHT_1 = "greg-idle-right-1";
     public static final String GREG_STANDING_RIGHT_2 = "greg-idle-right-2";
@@ -19,5 +21,19 @@ public class Constant {
 
 
     public static final float GREG_MOVE_SPEED = 20;
-    public static final String KNIGHT_STANDING_RIGHT= "knight_f_hit_anim_f0";
+
+    //Knight's Constants
+    public static final float KNIGHT_F_MOVE_SPEED = 20;
+    public static final String KNIGHT_STANDING_RIGHT_0 = "knight_f_idle_anim_f0";
+    public static final String KNIGHT_STANDING_RIGHT_1 = "knight_f_idle_anim_f1";
+    public static final String KNIGHT_STANDING_RIGHT_2 = "knight_f_idle_anim_f2";
+    public static final String KNIGHT_STANDING_RIGHT_3 = "knight_f_idle_anim_f3";
+    public static final String KNIGHT_RUN_RIGHT_0 = "knight_f_run_anim_f0";
+    public static final String KNIGHT_RUN_RIGHT_1 = "knight_f_run_anim_f1";
+    public static final String KNIGHT_RUN_RIGHT_2 = "knight_f_run_anim_f2";
+    public static final String KNIGHT_RUN_RIGHT_3 = "knight_f_run_anim_f3";
+    public static final String KNIGHT_HIT = "knight_f_hit_anim_f0";
+
+
+
 }
