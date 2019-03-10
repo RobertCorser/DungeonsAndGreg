@@ -24,6 +24,7 @@ public class GameScreen extends ScreenAdapter {
 
         greg = new Greg();
 
+
         batch = new SpriteBatch();
         viewport = new ExtendViewport(Constant.WORLD_SIZE, Constant.WORLD_SIZE);
     }
@@ -42,6 +43,7 @@ public class GameScreen extends ScreenAdapter {
         batch.setProjectionMatrix(viewport.getCamera().combined);
         batch.begin();
         greg.render(batch);
+
         batch.end();
 
     }

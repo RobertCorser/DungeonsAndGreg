@@ -20,13 +20,6 @@ public class Assets implements Disposable, AssetErrorListener {
 
     private AssetManager assetManager;
 
-    //Subclass declarations
-    public GregAssets gregAssets;
-    public KnightAssets knightAssets;
-
-
-    private Assets() {
-    }
 
     public void init(AssetManager assetManager) {
         TextureAtlas atlas;
@@ -51,12 +44,24 @@ public class Assets implements Disposable, AssetErrorListener {
         assetManager.dispose();
     }
 
+    // ASSET DECLARATIONS//
+    public GregAssets gregAssets;
+    public KnightAssets knightAssets;
+
+
+    private Assets() {
+    }
+
     public class GregAssets{
 
         public final AtlasRegion gregStandingRight;
 
         public GregAssets(TextureAtlas atlas){
-            gregStandingRight = atlas.findRegion(Constant.GREG_STANDING_RIGHT);
+            gregStandingRight1 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_0);
+            gregStandingRight2 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_1);
+            gregStandingRight3 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_2);
+            gregStandingRight4 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_3);
+
         }
 
     }

@@ -27,6 +27,9 @@ public class Greg {
         if(Gdx.input.isKeyPressed(Input.Keys.LEFT)){
             moveLeft(delta);
         }
+        if(Gdx.input.isKeyPressed(Input.Keys.RIGHT)){
+            moveRight(delta);
+        }
     }
 
     private void moveLeft(float delta){
@@ -34,7 +37,7 @@ public class Greg {
     }
 
     private void moveRight(float delta){
-        //TODO Implement Moving Right
+    position.x-= delta * Constant.GREG_MOVE_SPEED;
     }
 
     public Vector2 getPosition() {
