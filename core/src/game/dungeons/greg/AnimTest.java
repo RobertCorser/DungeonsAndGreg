@@ -18,7 +18,7 @@ public class Animator implements ApplicationListener {
         Animation<TextureRegion> walkAnimation;
 
         // Must declare frame type (TextureRegion)
-        
+
     Texture walkSheet;
         SpriteBatch spriteBatch;
 
