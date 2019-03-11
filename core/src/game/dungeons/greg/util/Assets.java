@@ -22,7 +22,7 @@ public class Assets implements Disposable, AssetErrorListener {
 
     //Subclass declarations
     public GregAssets gregAssets;
-
+    public KnightAssets knightAssets;
 
 
     private Assets() {
@@ -38,7 +38,7 @@ public class Assets implements Disposable, AssetErrorListener {
 
         atlas = assetManager.get(Constant.TEXTURE_ATLAS);
         gregAssets = new GregAssets(atlas);
-
+        knightAssets = new KnightAssets(atlas);
     }
 
     @Override
@@ -59,6 +59,15 @@ public class Assets implements Disposable, AssetErrorListener {
             gregStandingRight = atlas.findRegion(Constant.GREG_STANDING_RIGHT);
         }
 
+    }
+
+    public class KnightAssets{
+        public final AtlasRegion knightStandingRight;
+
+        public KnightAssets(TextureAtlas atlas){
+            knightStandingRight = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT);
+
+        }
     }
 
 }

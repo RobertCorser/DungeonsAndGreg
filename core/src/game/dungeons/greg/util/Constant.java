@@ -14,4 +14,5 @@ public class Constant {
 
     public static final float GREG_MOVE_SPEED = 20;
 
+    public static final String KNIGHT_STANDING_RIGHT= "knight_f_hit_anim_f0";
 }

@@ -1,16 +1,17 @@
 
 dungeonsandgreg.pack.png
+
 size: 512,64
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
 greg-idle-right-0
   rotate: false
-  xy: 2, 2
+  xy: 2, 24
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
-  index: -1
+  index: 0
 greg-idle-right-1
   rotate: false
   xy: 36, 2
@@ -18,13 +19,6 @@ greg-idle-right-1
   orig: 32, 36
   offset: 0, 0
   index: -1
-greg_idle_right
-  rotate: false
-  xy: 36, 2
-  size: 32, 36
-  orig: 32, 36
-  offset: 0, 0
-  index: 1
 greg-idle-right-2
   rotate: false
   xy: 70, 2
@@ -32,13 +26,6 @@ greg-idle-right-2
   orig: 32, 36
   offset: 0, 0
   index: -1
-greg_idle_right
-  rotate: false
-  xy: 70, 2
-  size: 32, 36
-  orig: 32, 36
-  offset: 0, 0
-  index: 2
 greg-idle-right-3
   rotate: false
   xy: 104, 2
@@ -46,38 +33,131 @@ greg-idle-right-3
   orig: 32, 36
   offset: 0, 0
   index: -1
-greg_idle_right
+knight_f_hit_anim_f0
   rotate: false
-  xy: 104, 2
-  size: 32, 36
-  orig: 32, 36
+  xy: 274, 32
+  size: 16, 28
+  orig: 16, 28
   offset: 0, 0
-  index: 3
-greg_idle_right
+  index: -1
+knight_f_idle_anim_f0
   rotate: false
-  xy: 138, 2
-  size: 32, 36
-  orig: 32, 36
+  xy: 292, 32
+  size: 16, 28
+  orig: 16, 28
   offset: 0, 0
-  index: 4
-greg_idle_right
+  index: -1
+knight_f_idle_anim_f1
   rotate: false
-  xy: 172, 2
-  size: 32, 36
-  orig: 32, 36
+  xy: 310, 32
+  size: 16, 28
+  orig: 16, 28
   offset: 0, 0
-  index: 5
-greg_run_right
+  index: -1
+knight_f_idle_anim_f2
   rotate: false
-  xy: 206, 2
-  size: 32, 36
-  orig: 32, 36
+  xy: 328, 32
+  size: 16, 28
+  orig: 16, 28
   offset: 0, 0
-  index: 1
-greg_run_right
+  index: -1
+knight_f_idle_anim_f3
   rotate: false
-  xy: 240, 2
-  size: 32, 36
-  orig: 32, 36
+  xy: 346, 32
+  size: 16, 28
+  orig: 16, 28
   offset: 0, 0
-  index: 2
+  index: -1
+knight_f_run_anim_f0
+  rotate: false
+  xy: 364, 32
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_f_run_anim_f1
+  rotate: false
+  xy: 382, 32
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_f_run_anim_f2
+  rotate: false
+  xy: 400, 32
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_f_run_anim_f3
+  rotate: false
+  xy: 418, 32
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_m_hit_anim_f0
+  rotate: false
+  xy: 436, 32
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_m_idle_anim_f0
+  rotate: false
+  xy: 454, 32
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_m_idle_anim_f1
+  rotate: false
+  xy: 472, 32
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_m_idle_anim_f2
+  rotate: false
+  xy: 490, 32
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_m_idle_anim_f3
+  rotate: false
+  xy: 274, 2
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_m_run_anim_f0
+  rotate: false
+  xy: 292, 2
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_m_run_anim_f1
+  rotate: false
+  xy: 310, 2
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_m_run_anim_f2
+  rotate: false
+  xy: 328, 2
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+knight_m_run_anim_f3
+  rotate: false
+  xy: 346, 2
+  size: 16, 28
+  orig: 16, 28
+  offset: 0, 0
+  index: -1
+
+
