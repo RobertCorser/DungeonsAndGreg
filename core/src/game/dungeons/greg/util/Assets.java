@@ -57,16 +57,24 @@ public class Assets implements Disposable, AssetErrorListener {
 
     public class GregAssets{
 
-        public final AtlasRegion gregStandingRight0;
+        public final Animation gregStandingRight;
+
+        //public final AtlasRegion gregStandingRight0;
         public final AtlasRegion gregStandingRight1;
         public final AtlasRegion gregStandingRight2;
         public final AtlasRegion gregStandingRight3;
 
         public GregAssets(TextureAtlas atlas){
-            gregStandingRight0 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_0);
+
+            //gregStandingRight0 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_0);
             gregStandingRight1 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_1);
             gregStandingRight2 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_2);
             gregStandingRight3 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_3);
+
+            Array<AtlasRegion> standingRightAnimation = new Array<AtlasRegion>();
+            standingRightAnimation.addAll(gregStandingRight1, gregStandingRight2, gregStandingRight3);
+            gregStandingRight = new Animation(Constant.GREG_ANIM_SPEED, standingRightAnimation, PlayMode.LOOP);
+
         }
 
     }
@@ -86,7 +94,7 @@ public class Assets implements Disposable, AssetErrorListener {
             knightStandingRight0 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_0);
             knightStandingRight1 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_1);
             knightStandingRight2 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_2);
-            knightStandingRight3 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_3)
+            knightStandingRight3 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_3);
             knightRunningRight0 = atlas.findRegion(Constant.KNIGHT_RUN_RIGHT_0);
             knightRunningRight1 = atlas.findRegion(Constant.KNIGHT_RUN_RIGHT_1);
             knightRunningRight2 = atlas.findRegion(Constant.KNIGHT_RUN_RIGHT_2);

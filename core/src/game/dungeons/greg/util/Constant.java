@@ -16,11 +16,8 @@ public class Constant {
     public static final String GREG_STANDING_RIGHT_1 = "greg-idle-right-1";
     public static final String GREG_STANDING_RIGHT_2 = "greg-idle-right-2";
     public static final String GREG_STANDING_RIGHT_3 = "greg-idle-right-3";
-
-
-
-
     public static final float GREG_MOVE_SPEED = 20;
+    public static final float GREG_ANIM_SPEED = 0.20f;
 
     //Knight's Constants
     public static final float KNIGHT_F_MOVE_SPEED = 20;

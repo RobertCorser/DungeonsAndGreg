@@ -1,446 +1,418 @@
 
 dungeonsandgreg.pack.png
-size: 256,128
+size: 512,64
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-greg-idle-right-0
-  rotate: false
-  xy: 2, 88
-  size: 32, 36
-  orig: 32, 36
-  offset: 0, 0
-  index: -1
 greg-idle-right-1
   rotate: false
-  xy: 2, 50
+  xy: 2, 24
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
   index: -1
-greg_idle_right
-  rotate: false
-  xy: 2, 50
-  size: 32, 36
-  orig: 32, 36
-  offset: 0, 0
-  index: 1
 greg-idle-right-2
   rotate: false
-  xy: 2, 12
+  xy: 36, 24
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
   index: -1
-greg_idle_right
-  rotate: false
-  xy: 2, 12
-  size: 32, 36
-  orig: 32, 36
-  offset: 0, 0
-  index: 2
 greg-idle-right-3
   rotate: false
-  xy: 36, 88
+  xy: 70, 24
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
   index: -1
-greg_idle_right
+greg-run-right-0
   rotate: false
-  xy: 36, 88
+  xy: 104, 24
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
-  index: 3
-greg_idle_right
+  index: -1
+greg-run-right-1
   rotate: false
-  xy: 36, 50
+  xy: 138, 24
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
-  index: 4
-greg_idle_right
+  index: -1
+greg-run-right-2
   rotate: false
-  xy: 36, 12
+  xy: 172, 24
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
-  index: 5
-greg_run_right
+  index: -1
+greg-run-right-3
   rotate: false
-  xy: 70, 88
+  xy: 206, 24
   size: 32, 36
   orig: 32, 36
   offset: 0, 0
-  index: 1
-greg_run_right
-  rotate: false
-  xy: 70, 50
-  size: 32, 36
-  orig: 32, 36
-  offset: 0, 0
-  index: 2
+  index: -1
 knight_f_hit_anim_f0
   rotate: false
-  xy: 70, 20
+  xy: 240, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_f_idle_anim_f0
   rotate: false
-  xy: 88, 20
+  xy: 258, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_f_idle_anim_f1
   rotate: false
-  xy: 104, 96
+  xy: 276, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_f_idle_anim_f2
   rotate: false
-  xy: 104, 66
+  xy: 294, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_f_idle_anim_f3
   rotate: false
-  xy: 106, 36
+  xy: 312, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_f_run_anim_f0
   rotate: false
-  xy: 106, 6
+  xy: 330, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_f_run_anim_f1
   rotate: false
-  xy: 122, 96
+  xy: 348, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_f_run_anim_f2
   rotate: false
-  xy: 122, 66
+  xy: 366, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_f_run_anim_f3
   rotate: false
-  xy: 124, 36
+  xy: 384, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_m_hit_anim_f0
   rotate: false
-  xy: 124, 6
+  xy: 402, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_m_idle_anim_f0
   rotate: false
-  xy: 140, 96
+  xy: 420, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_m_idle_anim_f1
   rotate: false
-  xy: 140, 66
+  xy: 438, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_m_idle_anim_f2
   rotate: false
-  xy: 142, 36
+  xy: 456, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_m_idle_anim_f3
   rotate: false
-  xy: 142, 6
+  xy: 474, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_m_run_anim_f0
   rotate: false
-  xy: 158, 96
+  xy: 492, 32
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_m_run_anim_f1
   rotate: false
-  xy: 158, 66
+  xy: 240, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_m_run_anim_f2
   rotate: false
-  xy: 160, 36
+  xy: 258, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 knight_m_run_anim_f3
   rotate: false
-  xy: 160, 6
+  xy: 276, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 muddy_idle_anim_f0
   rotate: false
-  xy: 70, 2
+  xy: 74, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 muddy_run_anim_f0
   rotate: false
-  xy: 70, 2
+  xy: 74, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 muddy_idle_anim_f1
   rotate: false
-  xy: 88, 2
+  xy: 92, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 muddy_run_anim_f1
   rotate: false
-  xy: 88, 2
+  xy: 92, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 muddy_idle_anim_f2
   rotate: false
-  xy: 214, 4
+  xy: 110, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 muddy_run_anim_f2
   rotate: false
-  xy: 214, 4
+  xy: 110, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 muddy_idle_anim_f3
   rotate: false
-  xy: 232, 64
+  xy: 128, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 muddy_run_anim_f3
   rotate: false
-  xy: 232, 64
+  xy: 128, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 necromancer_idle_anim_f0
   rotate: false
-  xy: 214, 44
+  xy: 2, 2
   size: 16, 20
   orig: 16, 20
   offset: 0, 0
   index: -1
 necromancer_run_anim_f0
   rotate: false
-  xy: 214, 44
+  xy: 2, 2
   size: 16, 20
   orig: 16, 20
   offset: 0, 0
   index: -1
 necromancer_idle_anim_f1
   rotate: false
-  xy: 230, 104
+  xy: 20, 2
   size: 16, 20
   orig: 16, 20
   offset: 0, 0
   index: -1
 necromancer_run_anim_f1
   rotate: false
-  xy: 230, 104
+  xy: 20, 2
   size: 16, 20
   orig: 16, 20
   offset: 0, 0
   index: -1
 necromancer_idle_anim_f2
   rotate: false
-  xy: 230, 82
+  xy: 38, 2
   size: 16, 20
   orig: 16, 20
   offset: 0, 0
   index: -1
 necromancer_run_anim_f2
   rotate: false
-  xy: 230, 82
+  xy: 38, 2
   size: 16, 20
   orig: 16, 20
   offset: 0, 0
   index: -1
 necromancer_idle_anim_f3
   rotate: false
-  xy: 214, 22
+  xy: 56, 2
   size: 16, 20
   orig: 16, 20
   offset: 0, 0
   index: -1
 necromancer_run_anim_f3
   rotate: false
-  xy: 214, 22
+  xy: 56, 2
   size: 16, 20
   orig: 16, 20
   offset: 0, 0
   index: -1
 wizzard_m_idle_anim_f0
   rotate: false
-  xy: 176, 96
+  xy: 294, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 wizzard_m_idle_anim_f1
   rotate: false
-  xy: 176, 66
+  xy: 312, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 wizzard_m_idle_anim_f2
   rotate: false
-  xy: 178, 36
+  xy: 330, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 wizzart_f_run_anim_f2
   rotate: false
-  xy: 178, 6
+  xy: 348, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 wizzart_f_run_anim_f3
   rotate: false
-  xy: 194, 96
+  xy: 366, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 wizzart_m_hit_anim_f0
   rotate: false
-  xy: 194, 66
+  xy: 384, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 wizzart_m_run_anim_f0
   rotate: false
-  xy: 196, 36
+  xy: 402, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 wizzart_m_run_anim_f1
   rotate: false
-  xy: 196, 6
+  xy: 420, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 wizzart_m_run_anim_f2
   rotate: false
-  xy: 212, 96
+  xy: 438, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 wizzart_m_run_anim_f3
   rotate: false
-  xy: 212, 66
+  xy: 456, 2
   size: 16, 28
   orig: 16, 28
   offset: 0, 0
   index: -1
 zombie_idle_anim_f0
   rotate: false
-  xy: 232, 46
+  xy: 146, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie_run_anim_f0
   rotate: false
-  xy: 232, 46
+  xy: 146, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie_idle_anim_f1
   rotate: false
-  xy: 232, 28
+  xy: 164, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie_idle_anim_f3
   rotate: false
-  xy: 232, 28
+  xy: 164, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie_run_anim_f1
   rotate: false
-  xy: 232, 28
+  xy: 164, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie_run_anim_f3
   rotate: false
-  xy: 232, 28
+  xy: 164, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie_idle_anim_f2
   rotate: false
-  xy: 232, 10
+  xy: 182, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
   index: -1
 zombie_run_anim_f2
   rotate: false
-  xy: 232, 10
+  xy: 182, 6
   size: 16, 16
   orig: 16, 16
   offset: 0, 0
