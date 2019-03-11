@@ -12,6 +12,7 @@ import game.dungeons.greg.util.Assets;
 import game.dungeons.greg.util.Constant;
 import game.dungeons.greg.util.Enums.Direction;
 import game.dungeons.greg.util.Enums.WalkState;
+import game.dungeons.greg.util.Enums.JumpState;
 
 public class Greg {
 
@@ -20,7 +21,7 @@ public class Greg {
     private long walkStartTime;
     private float walkTimeSeconds;
 
-    private long standStartTime = 0;
+    private long standStartTime;
     private float standTimeSeconds;
 
     private Direction facing;

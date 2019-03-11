@@ -12,4 +12,10 @@ public class Enums {
         WALKING
     }
 
+    public enum JumpState{
+        JUMPING,
+        FALLING,
+        GROUNDED
+    }
+
 }
