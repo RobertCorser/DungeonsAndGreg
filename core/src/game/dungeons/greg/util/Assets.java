@@ -20,13 +20,6 @@ public class Assets implements Disposable, AssetErrorListener {
 
     private AssetManager assetManager;
 
-    //Subclass declarations
-    public GregAssets gregAssets;
-    public KnightAssets knightAssets;
-
-
-    private Assets() {
-    }
 
     public void init(AssetManager assetManager) {
         TextureAtlas atlas;
@@ -37,8 +30,11 @@ public class Assets implements Disposable, AssetErrorListener {
         assetManager.finishLoading();
 
         atlas = assetManager.get(Constant.TEXTURE_ATLAS);
+
+        //SPRITE ASSETS
         gregAssets = new GregAssets(atlas);
         knightAssets = new KnightAssets(atlas);
+        necroAssets = new NecroAssets(atlas);
     }
 
     @Override
@@ -51,23 +47,61 @@ public class Assets implements Disposable, AssetErrorListener {
         assetManager.dispose();
     }
 
+    // ASSET DECLARATIONS//
+    public GregAssets gregAssets;
+    public KnightAssets knightAssets;
+    public NecroAssets necroAssets;
+
+    private Assets() {
+    }
+
     public class GregAssets{
 
-        public final AtlasRegion gregStandingRight;
+        public final AtlasRegion gregStandingRight0;
+        public final AtlasRegion gregStandingRight1;
+        public final AtlasRegion gregStandingRight2;
+        public final AtlasRegion gregStandingRight3;
 
         public GregAssets(TextureAtlas atlas){
-            gregStandingRight = atlas.findRegion(Constant.GREG_STANDING_RIGHT);
+            gregStandingRight0 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_0);
+            gregStandingRight1 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_1);
+            gregStandingRight2 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_2);
+            gregStandingRight3 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_3);
         }
 
     }
 
     public class KnightAssets{
-        public final AtlasRegion knightStandingRight;
+        public final AtlasRegion knightStandingRight0;
+        public final AtlasRegion knightStandingRight1;
+        public final AtlasRegion knightStandingRight2;
+        public final AtlasRegion knightStandingRight3;
+        public final AtlasRegion knightRunningRight0;
+        public final AtlasRegion knightRunningRight1;
+        public final AtlasRegion knightRunningRight2;
+        public final AtlasRegion knightRunningRight3;
+        public final AtlasRegion knighthit0;
 
         public KnightAssets(TextureAtlas atlas){
-            knightStandingRight = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT);
+            knightStandingRight0 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_0);
+            knightStandingRight1 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_1);
+            knightStandingRight2 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_2);
+            knightStandingRight3 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_3)
+            knightRunningRight0 = atlas.findRegion(Constant.KNIGHT_RUN_RIGHT_0);
+            knightRunningRight1 = atlas.findRegion(Constant.KNIGHT_RUN_RIGHT_1);
+            knightRunningRight2 = atlas.findRegion(Constant.KNIGHT_RUN_RIGHT_2);
+            knightRunningRight3 = atlas.findRegion(Constant.KNIGHT_RUN_RIGHT_3);
+            knighthit0 = atlas.findRegion(Constant.KNIGHT_HIT);
+        }
+    }
+
+    //Necromancer
+    public class NecroAssets {
+
+        public NecroAssets(TextureAtlas atlas){
 
         }
     }
 
 }
+
