@@ -27,6 +27,8 @@ public class Greg {
     private Direction facing;
     private WalkState walkState;
 
+
+
     public Greg() {
         position = new Vector2(0, 0);
         standStartTime = TimeUtils.nanoTime();
@@ -73,4 +75,6 @@ public class Greg {
     public Vector2 getPosition() {
         return position;
     }
+
+
 }
