@@ -38,7 +38,8 @@ public class Constant {
     //Wizard Constants
 
 
-
+    //Platform Constants
+    public static final String PLATFORM_1 = "floor-1";
 
 
 

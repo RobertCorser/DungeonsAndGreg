@@ -8,6 +8,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 import game.dungeons.greg.entities.Greg;
+import game.dungeons.greg.entities.Platform;
 import game.dungeons.greg.util.Assets;
 import game.dungeons.greg.util.Constant;
 
@@ -16,6 +17,7 @@ public class GameScreen extends ScreenAdapter {
     private SpriteBatch batch;
     private ExtendViewport viewport;
     private Greg greg;
+    private Platform testPlatform;
 
     @Override
     public void show() {
@@ -23,6 +25,7 @@ public class GameScreen extends ScreenAdapter {
         Assets.instance.init(assetManager);
 
         greg = new Greg();
+        testPlatform = new Platform(20,20, 20, 20);
 
 
         batch = new SpriteBatch();
@@ -43,6 +46,7 @@ public class GameScreen extends ScreenAdapter {
         batch.setProjectionMatrix(viewport.getCamera().combined);
         batch.begin();
         greg.render(batch);
+        testPlatform.render(batch);
 
         batch.end();
 

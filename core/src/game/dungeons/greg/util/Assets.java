@@ -20,6 +20,15 @@ public class Assets implements Disposable, AssetErrorListener {
 
     private AssetManager assetManager;
 
+    // ASSET DECLARATIONS//
+    public GregAssets gregAssets;
+    public KnightAssets knightAssets;
+    public NecroAssets necroAssets;
+    public PlatformAssets platformAssets;
+
+
+    private Assets() {
+    }
 
     public void init(AssetManager assetManager) {
         TextureAtlas atlas;
@@ -35,6 +44,8 @@ public class Assets implements Disposable, AssetErrorListener {
         gregAssets = new GregAssets(atlas);
         knightAssets = new KnightAssets(atlas);
         necroAssets = new NecroAssets(atlas);
+        platformAssets = new PlatformAssets(atlas);
+
     }
 
     @Override
@@ -45,14 +56,6 @@ public class Assets implements Disposable, AssetErrorListener {
     @Override
     public void dispose() {
         assetManager.dispose();
-    }
-
-    // ASSET DECLARATIONS//
-    public GregAssets gregAssets;
-    public KnightAssets knightAssets;
-    public NecroAssets necroAssets;
-
-    private Assets() {
     }
 
     public class GregAssets{
@@ -109,6 +112,19 @@ public class Assets implements Disposable, AssetErrorListener {
         public NecroAssets(TextureAtlas atlas){
 
         }
+    }
+
+    public class PlatformAssets{
+
+        public AtlasRegion platform1;
+
+        public PlatformAssets(TextureAtlas atlas){
+
+            platform1 = atlas.findRegion(Constant.PLATFORM_1);
+
+
+        }
+
     }
 
 }
