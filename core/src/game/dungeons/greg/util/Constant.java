@@ -11,6 +11,9 @@ public class Constant {
     public static final String TEXTURE_ATLAS = "images/dungeonsandgreg.pack.atlas";
 
 
+    //World Constants
+    public static final float GRAVITY_CONSTANT = 10;
+
     //Greg's Constants
     public static final String GREG_STANDING_RIGHT_0 = "greg-idle-right-0";
     public static final String GREG_STANDING_RIGHT_1 = "greg-idle-right-1";
@@ -18,6 +21,8 @@ public class Constant {
     public static final String GREG_STANDING_RIGHT_3 = "greg-idle-right-3";
     public static final float GREG_MOVE_SPEED = 30;
     public static final float GREG_ANIM_SPEED = 0.20f;
+    public static final float GREG_JUMP_TIME = 0.1f;
+    public static final float GREG_JUMP_SPEED = 200;
 
     //Knight's Constants
     public static final float KNIGHT_F_MOVE_SPEED = 20;
@@ -40,6 +45,8 @@ public class Constant {
 
     //Platform Constants
     public static final String PLATFORM_1 = "floor-1";
+
+
 
 
 
