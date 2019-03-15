@@ -10,6 +10,11 @@ public class Constant {
 
     public static final String TEXTURE_ATLAS = "images/dungeonsandgreg.pack.atlas";
 
+    //Background Constants
+    public static final String BACKGROUND1 = "images/BGBack.png";
+    public static final String BACKGROUND2 = "images/BGFront.png";
+    public static final String BACKGROUND3= "images/CloudsBack.png";
+    public static final String BACKGROUND4 = "images/CloudsFront.png";
 
     //Greg's Constants
     public static final String GREG_STANDING_RIGHT_0 = "greg-idle-right-0";

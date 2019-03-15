@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetDescriptor;
 import com.badlogic.gdx.assets.AssetErrorListener;
 import com.badlogic.gdx.assets.AssetManager;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Animation.PlayMode;
 import com.badlogic.gdx.graphics.g2d.NinePatch;
@@ -11,6 +12,8 @@ import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas.AtlasRegion;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Disposable;
+
+
 
 
 public class Assets implements Disposable, AssetErrorListener {
@@ -25,7 +28,7 @@ public class Assets implements Disposable, AssetErrorListener {
     public KnightAssets knightAssets;
     public NecroAssets necroAssets;
     public PlatformAssets platformAssets;
-
+    public BackgroundAssets backgroundAssets;
 
     private Assets() {
     }
@@ -33,9 +36,16 @@ public class Assets implements Disposable, AssetErrorListener {
     public void init(AssetManager assetManager) {
         TextureAtlas atlas;
 
+
         this.assetManager = assetManager;
         assetManager.setErrorListener(this);
         assetManager.load(Constant.TEXTURE_ATLAS, TextureAtlas.class);
+
+        assetManager.load(Constant.BACKGROUND1, Texture.class);
+        assetManager.load(Constant.BACKGROUND2, Texture.class);
+        assetManager.load(Constant.BACKGROUND3, Texture.class);
+        assetManager.load(Constant.BACKGROUND4, Texture.class);
+
         assetManager.finishLoading();
 
         atlas = assetManager.get(Constant.TEXTURE_ATLAS);
@@ -45,6 +55,11 @@ public class Assets implements Disposable, AssetErrorListener {
         knightAssets = new KnightAssets(atlas);
         necroAssets = new NecroAssets(atlas);
         platformAssets = new PlatformAssets(atlas);
+
+        backgroundAssets = new BackgroundAssets();
+
+
+
 
     }
 
@@ -57,6 +72,7 @@ public class Assets implements Disposable, AssetErrorListener {
     public void dispose() {
         assetManager.dispose();
     }
+
 
     public class GregAssets{
 
@@ -121,11 +137,23 @@ public class Assets implements Disposable, AssetErrorListener {
         public PlatformAssets(TextureAtlas atlas){
 
             platform1 = atlas.findRegion(Constant.PLATFORM_1);
-
-
         }
-
     }
+    public class BackgroundAssets{
+        public Texture background1;
+        public Texture background2;
+        public Texture background3;
+        public Texture background4;
+
+        public BackgroundAssets(){
+            background1 = new Texture(Constant.BACKGROUND1);
+            background2 = new Texture(Constant.BACKGROUND2);
+            background3 = new Texture(Constant.BACKGROUND3);
+            background4 = new Texture(Constant.BACKGROUND4);
+        }
+    }
+
+
 
 }
 

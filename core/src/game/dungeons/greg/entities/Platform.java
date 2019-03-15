@@ -21,7 +21,7 @@ public class Platform {
         float width = right - left;
         float height = top - bottom;
 
-        batch.draw(Assets.instance.platformAssets.platform1, 20, 20, width, height);
+        batch.draw(Assets.instance.platformAssets.platform1, 10, 10, width, height);
     }
 
 }

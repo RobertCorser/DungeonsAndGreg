@@ -4,12 +4,14 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.ExtendViewport;
 
 import game.dungeons.greg.entities.Greg;
 import game.dungeons.greg.entities.Platform;
 import game.dungeons.greg.util.Assets;
+import game.dungeons.greg.util.Background;
 import game.dungeons.greg.util.Constant;
 
 public class GameScreen extends ScreenAdapter {
@@ -18,6 +20,10 @@ public class GameScreen extends ScreenAdapter {
     private ExtendViewport viewport;
     private Greg greg;
     private Platform testPlatform;
+    private Background background;
+    private Texture background1, background2, background3, background4;
+
+
 
     @Override
     public void show() {
@@ -25,6 +31,8 @@ public class GameScreen extends ScreenAdapter {
         Assets.instance.init(assetManager);
 
         greg = new Greg();
+        background = new Background();
+
         testPlatform = new Platform(20,20, 20, 20);
 
 
@@ -35,16 +43,20 @@ public class GameScreen extends ScreenAdapter {
     @Override
     public void render(float delta) {
         update(delta);
-        Gdx.gl.glClearColor(Constant.BACKGROUND_COLOR.r,
+       /* Gdx.gl.glClearColor(Constant.BACKGROUND_COLOR.r,
                 Constant.BACKGROUND_COLOR.g,
                 Constant.BACKGROUND_COLOR.b,
                 Constant.BACKGROUND_COLOR.a);
-        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+                */
+       Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
 
         viewport.apply();
 
         batch.setProjectionMatrix(viewport.getCamera().combined);
         batch.begin();
+        background.render(batch);
+       // batch.draw(, 0, 0);
         greg.render(batch);
         testPlatform.render(batch);
 
