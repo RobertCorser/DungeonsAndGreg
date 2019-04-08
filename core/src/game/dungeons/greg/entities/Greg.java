@@ -5,7 +5,9 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.utils.GdxBuild;
 import com.badlogic.gdx.utils.TimeUtils;
 
 import game.dungeons.greg.util.Assets;
@@ -14,6 +16,7 @@ import game.dungeons.greg.util.Enums.Direction;
 import game.dungeons.greg.util.Enums.WalkState;
 import game.dungeons.greg.util.Enums.JumpState;
 import game.dungeons.greg.util.Utils;
+
 
 public class Greg {
 
@@ -33,7 +36,12 @@ public class Greg {
     private WalkState walkState;
     private JumpState jumpState;
 
+    private int width = 16;
+    private int height = 16;
 
+    public Rectangle gregRectangle;
+
+    private Platform testPlaform = new Platform(30, 25, 30, 16);
 
     public Greg() {
         position = new Vector2(0, 0);
@@ -54,9 +62,19 @@ public class Greg {
     }
 
     public void update(float delta) {
+        gregRectangle = new Rectangle(getPosition().x,getPosition().y,16,16);
+
 
         velocity.y -= Constant.GRAVITY_CONSTANT;
         position.mulAdd(velocity, delta);
+
+        //good for projectiles
+/*        if(gregRectangle.overlaps(testPlaform.platformRectangle)) {
+            jumpState = JumpState.GROUNDED;
+            position.y = testPlaform.top +10;
+            velocity.y = 0;
+            Gdx.app.log("","Grounded");
+        }*/
 
         if(position.y < 10){
             position.y = 10;
@@ -70,7 +88,7 @@ public class Greg {
             moveRight(delta);
         }
 
-        if (Gdx.input.isKeyPressed(Input.Keys.Z)) {
+        if (Gdx.input.isKeyJustPressed(Input.Keys.Z)) {
             switch (jumpState) {
                 case GROUNDED:
                     startJump();
@@ -84,7 +102,9 @@ public class Greg {
         }
 
 
+
     }
+
 
     private void moveLeft(float delta) {
         walkState = WalkState.WALKING;
