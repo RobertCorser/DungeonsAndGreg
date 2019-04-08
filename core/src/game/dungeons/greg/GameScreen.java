@@ -33,7 +33,7 @@ public class GameScreen extends ScreenAdapter {
         greg = new Greg();
         background = new Background();
 
-        testPlatform = new Platform(20,20, 20, 20);
+        testPlatform = new Platform(45,2, 20, 5);
 
 
         batch = new SpriteBatch();
@@ -43,20 +43,13 @@ public class GameScreen extends ScreenAdapter {
     @Override
     public void render(float delta) {
         update(delta);
-       /* Gdx.gl.glClearColor(Constant.BACKGROUND_COLOR.r,
-                Constant.BACKGROUND_COLOR.g,
-                Constant.BACKGROUND_COLOR.b,
-                Constant.BACKGROUND_COLOR.a);
-                */
+
        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-
-
         viewport.apply();
-
         batch.setProjectionMatrix(viewport.getCamera().combined);
         batch.begin();
         background.render(batch);
-       // batch.draw(, 0, 0);
+
         greg.render(batch);
         testPlatform.render(batch);
 
