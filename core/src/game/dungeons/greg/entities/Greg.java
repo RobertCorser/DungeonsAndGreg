@@ -41,7 +41,7 @@ public class Greg {
 
     public Rectangle gregRectangle;
 
-    private Platform testPlaform = new Platform(30, 25, 30, 16);
+    //private Platform testPlaform = new Platform(30, 25, 30, 16);
 
     public Greg() {
         position = new Vector2(0, 0);

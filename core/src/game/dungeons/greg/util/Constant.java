@@ -24,6 +24,12 @@ public class Constant {
     public static final String GREG_STANDING_RIGHT_1 = "greg-idle-right-1";
     public static final String GREG_STANDING_RIGHT_2 = "greg-idle-right-2";
     public static final String GREG_STANDING_RIGHT_3 = "greg-idle-right-3";
+
+    public static final String GREG_RUNNING_RIGHT_0 = "greg-run-right-0";
+    public static final String GREG_RUNNING_RIGHT_1 = "greg-run-right-1";
+    public static final String GREG_RUNNING_RIGHT_2 = "greg-run-right-2";
+    public static final String GREG_RUNNING_RIGHT_3 = "greg-run-right-3";
+
     public static final float GREG_MOVE_SPEED = 30;
     public static final float GREG_ANIM_SPEED = 0.20f;
     public static final float GREG_JUMP_TIME = 0.1f;
@@ -35,10 +41,12 @@ public class Constant {
     public static final String KNIGHT_STANDING_RIGHT_1 = "knight_f_idle_anim_f1";
     public static final String KNIGHT_STANDING_RIGHT_2 = "knight_f_idle_anim_f2";
     public static final String KNIGHT_STANDING_RIGHT_3 = "knight_f_idle_anim_f3";
+
     public static final String KNIGHT_RUN_RIGHT_0 = "knight_f_run_anim_f0";
     public static final String KNIGHT_RUN_RIGHT_1 = "knight_f_run_anim_f1";
     public static final String KNIGHT_RUN_RIGHT_2 = "knight_f_run_anim_f2";
     public static final String KNIGHT_RUN_RIGHT_3 = "knight_f_run_anim_f3";
+
     public static final String KNIGHT_HIT = "knight_f_hit_anim_f0";
 
     //Necromancer Constants

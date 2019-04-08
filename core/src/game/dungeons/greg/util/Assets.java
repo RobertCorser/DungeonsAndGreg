@@ -78,14 +78,12 @@ public class Assets implements Disposable, AssetErrorListener {
 
         public final Animation gregStandingRight;
 
-        //public final AtlasRegion gregStandingRight0;
         public final AtlasRegion gregStandingRight1;
         public final AtlasRegion gregStandingRight2;
         public final AtlasRegion gregStandingRight3;
 
         public GregAssets(TextureAtlas atlas){
 
-            //gregStandingRight0 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_0);
             gregStandingRight1 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_1);
             gregStandingRight2 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_2);
             gregStandingRight3 = atlas.findRegion(Constant.GREG_STANDING_RIGHT_3);
@@ -99,10 +97,12 @@ public class Assets implements Disposable, AssetErrorListener {
     }
 
     public class KnightAssets{
+
         public final AtlasRegion knightStandingRight0;
         public final AtlasRegion knightStandingRight1;
         public final AtlasRegion knightStandingRight2;
         public final AtlasRegion knightStandingRight3;
+
         public final AtlasRegion knightRunningRight0;
         public final AtlasRegion knightRunningRight1;
         public final AtlasRegion knightRunningRight2;
