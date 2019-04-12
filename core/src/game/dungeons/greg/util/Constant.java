@@ -1,6 +1,7 @@
 package game.dungeons.greg.util;
 
 import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.math.Vector2;
 
 public class Constant {
 
@@ -34,6 +35,7 @@ public class Constant {
     public static final float GREG_ANIM_SPEED = 0.20f;
     public static final float GREG_JUMP_TIME = 0.1f;
     public static final float GREG_JUMP_SPEED = 200;
+    public static final float GREG_STANCE_WIDTH = 14.0f;
 
     //Knight's Constants
     public static final float KNIGHT_F_MOVE_SPEED = 20;
@@ -59,6 +61,10 @@ public class Constant {
     //Platform Constants
     public static final String PLATFORM_1 = "floor-1";
 
+    // Bullet
+    public static final String BULLET_SPRITE = "imp-idle-anim-0";
+    public static final float BULLET_MOVE_SPEED = 150;
+    public static final Vector2 BULLET_CENTER = new Vector2(3, 2);
 
 
 

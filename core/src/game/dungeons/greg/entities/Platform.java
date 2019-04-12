@@ -1,8 +1,6 @@
 package game.dungeons.greg.entities;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.Rectangle;
-
 import game.dungeons.greg.util.Assets;
 
 public class Platform {
@@ -12,22 +10,18 @@ public class Platform {
     public final float left;
     public final float right;
 
-
-    public Rectangle platformRectangle;
-
     public Platform(float left, float top, float width, float height) {
         this.top = top;
         this.bottom = top - height;
         this.left = left;
         this.right = left + width;
-        platformRectangle = new Rectangle(45,25,20,5);
     }
 
     public void render(SpriteBatch batch) {
         float width = right - left;
         float height = top - bottom;
 
-        batch.draw(Assets.instance.platformAssets.platform1, 45, 25, width, height);
+        batch.draw(Assets.instance.platformAssets.platform1, right - 2, bottom, width, height);
     }
 
 }

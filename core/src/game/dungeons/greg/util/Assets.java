@@ -14,8 +14,6 @@ import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.Disposable;
 
 
-
-
 public class Assets implements Disposable, AssetErrorListener {
 
     public static final String TAG = Assets.class.getName();
@@ -29,6 +27,7 @@ public class Assets implements Disposable, AssetErrorListener {
     public NecroAssets necroAssets;
     public PlatformAssets platformAssets;
     public BackgroundAssets backgroundAssets;
+    public ProjectileAssets projectileAssets;
 
     private Assets() {
     }
@@ -57,6 +56,8 @@ public class Assets implements Disposable, AssetErrorListener {
         platformAssets = new PlatformAssets(atlas);
 
         backgroundAssets = new BackgroundAssets();
+
+        projectileAssets = new ProjectileAssets(atlas);
 
 
 
@@ -153,7 +154,15 @@ public class Assets implements Disposable, AssetErrorListener {
         }
     }
 
+    public class ProjectileAssets {
 
+        public final AtlasRegion bullet;
+
+        public ProjectileAssets(TextureAtlas atlas) {
+            bullet = atlas.findRegion(Constant.BULLET_SPRITE);
+        }
+
+    }
 
 }
 

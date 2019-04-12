@@ -655,7 +655,7 @@ ice_zombie_run_anim_f2
   orig: 16, 16
   offset: 0, 0
   index: -1
-imp_idle_anim_f0
+imp-idle-anim-0
   rotate: false
   xy: 740, 56
   size: 16, 16
