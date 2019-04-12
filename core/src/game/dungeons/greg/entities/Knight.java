@@ -12,8 +12,8 @@ import game.dungeons.greg.util.Constant;
 import game.dungeons.greg.util.Enums;
 
 public class Knight {
-
-    private Vector2 position;
+}
+   /* private Vector2 position;
     private com.badlogic.gdx.math.Vector2 velocity;
 
     private long walkStartTime;
@@ -29,26 +29,28 @@ public class Knight {
     private int height = 16;
 
     public Knight() {
-        position = new Vector2(0, 0);
-        standStartTime = TimeUtils.nanoTime();
-        velocity = new Vector2();
-        jumpState = Enums.JumpState.GROUNDED;
-    }
-
-    public void render(SpriteBatch batch) {
-        //Default value
-        TextureRegion region;
-        standTimeSeconds = MathUtils.nanoToSec * (TimeUtils.nanoTime() - standStartTime);
-        //region = Assets.instance.knightAssets.knightRunningRight0.getKeyFrame(standTimeSeconds);
-       // batch.draw(region, position.x, position.y);
-    }
-
-    public void update(float delta) {
-        velocity.y -= Constant.GRAVITY_CONSTANT;
-        position.mulAdd(velocity, delta);
-    }
-
-    public Vector2 getPosition() {
-        return position;
-    }
-}
+//        position = new Vector2(0, 0);
+//        standStartTime = TimeUtils.nanoTime();
+//        velocity = new Vector2();
+//        jumpState = Enums.JumpState.GROUNDED;
+//    }
+//
+//    public void render(SpriteBatch batch) {
+//        //Default value
+//        TextureRegion region;
+//        standTimeSeconds = MathUtils.nanoToSec * (TimeUtils.nanoTime() - standStartTime);
+//        region = Assets.instance.knightAssets.knightRunningRight0.getKeyFrame(standTimeSeconds);
+//
+//
+//        batch.draw(region, position.x, position.y);
+//    }
+//
+//    public void update(float delta) {
+//        velocity.y -= Constant.GRAVITY_CONSTANT;
+//        position.mulAdd(velocity, delta);
+//    }
+//
+//    public Vector2 getPosition() {
+//        return position;
+//    }
+}*/

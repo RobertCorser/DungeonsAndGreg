@@ -56,7 +56,9 @@ public class Assets implements Disposable, AssetErrorListener {
         platformAssets = new PlatformAssets(atlas);
 
         backgroundAssets = new BackgroundAssets();
+
         projectileAssets = new ProjectileAssets(atlas);
+
 
 
 
@@ -96,8 +98,6 @@ public class Assets implements Disposable, AssetErrorListener {
     }
 
     public class KnightAssets{
-
-       // public final Animation knightStandingRight;
 
         public final AtlasRegion knightStandingRight0;
         public final AtlasRegion knightStandingRight1;
