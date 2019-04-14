@@ -20,6 +20,8 @@ import game.dungeons.greg.util.Utils;
 
 public class Greg {
 
+    //TODO dying, ammo
+
     private Vector2 position;
     private Vector2 lastFramePosition;
     private Vector2 velocity;
@@ -31,7 +33,7 @@ public class Greg {
     private float standTimeSeconds;
 
     private long jumpStartTime;
-    private float jumtTimeSeconds;
+    private float jumpTimeSeconds;
 
     private Direction facing;
     private WalkState walkState;
@@ -51,11 +53,8 @@ public class Greg {
     public void render(SpriteBatch batch) {
         //Default value
         TextureRegion region;
-
         standTimeSeconds = MathUtils.nanoToSec * (TimeUtils.nanoTime() - standStartTime);
         region = Assets.instance.gregAssets.gregStandingRight.getKeyFrame(standTimeSeconds);
-
-
         batch.draw(region, position.x, position.y);
     }
 
