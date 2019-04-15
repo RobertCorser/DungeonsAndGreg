@@ -17,5 +17,8 @@ public class Enums {
         FALLING,
         GROUNDED
     }
+    public enum HitState{
+        HIT
+    }
 
 }

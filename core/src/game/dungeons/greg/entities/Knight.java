@@ -15,7 +15,6 @@ import game.dungeons.greg.util.Enums;
 
 public class Knight {
 
-
     //#knightgoals
     //TODO walking, killing and dying
 
@@ -31,7 +30,7 @@ public class Knight {
 
     private Enums.Direction facing;
     private Enums.WalkState walkState;
-    private Enums.JumpState jumpState;
+
     private int width = 16;
     private int height = 16;
 
@@ -40,7 +39,7 @@ public class Knight {
     private Level level;
 
     public Knight(Vector2 initPosition , Level level) {
-       position = new Vector2(0, 0);
+       position = initPosition;
        standStartTime = TimeUtils.nanoTime();
        velocity = new Vector2();
        lastFramePosition = new Vector2(0, 0);
@@ -61,24 +60,11 @@ public class Knight {
         velocity.y -= Constant.GRAVITY_CONSTANT;
         position.mulAdd(velocity, delta);
 
-        for (Platform platform : platforms) {
-            if (goLeft(platform)) {
-                moveLeft(delta);
-                position.y = platform.top;
-            }
-
-            else if(goRight(platform)){
-                position.y = platform.top;
-
-                moveRight(delta);
-            }
-        }
     }
 
     private void moveLeft(float delta) {
         walkState = Enums.WalkState.WALKING;
         facing = Enums.Direction.LEFT;
-
         walkStartTime = TimeUtils.nanoTime();
         position.x -= delta * Constant.KNIGHT_F_MOVE_SPEED;
     }
@@ -89,30 +75,6 @@ public class Knight {
         walkStartTime = TimeUtils.nanoTime();
         position.x += delta * Constant.KNIGHT_F_MOVE_SPEED;
     }
-
-    //i am not doing this right....
-    boolean goRight(Platform platform) {
-        boolean rightFootIn = false;
-        if (lastFramePosition.y >= platform.top && position.y < platform.top) {
-            float rightFoot = position.x + Constant.KNIGHT_STANCE_WIDTH / 2;
-            rightFootIn = (platform.left < rightFoot && platform.right > rightFoot);
-        }
-
-
-        return rightFootIn;
-    }
-    boolean goLeft(Platform platform){
-        boolean leftFootIn = false;
-
-        if (lastFramePosition.y >= platform.top && position.y < platform.top) {
-            float leftFoot = position.x - Constant.KNIGHT_STANCE_WIDTH / 2;
-            leftFootIn = (platform.left < leftFoot && platform.right > leftFoot);
-        }
-        else leftFootIn = false;
-
-        return leftFootIn;
-        }
-
 
     public Vector2 getPosition() {
         return position;

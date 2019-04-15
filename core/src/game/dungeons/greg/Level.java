@@ -32,7 +32,7 @@ public class Level {
         greg = new Greg(new Vector2(0, 0), this);
 
 
-        knight1 = new Knight(new Vector2(20, 60), this);
+        knight1 = new Knight(new Vector2(40, 60), this);
 
 
         background = new Background();
@@ -81,6 +81,7 @@ public class Level {
 
         greg.render(batch);
         knight1.render(batch);
+
         batch.end();
 
     }
