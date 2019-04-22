@@ -37,16 +37,17 @@ public class Knight {
     private boolean movingLeft = true;
 
     private Level level;
+    private Platform platform;
 
-    public Knight(Vector2 initPosition , Level level) {
+    public Knight(Vector2 initPosition , Level level, Platform platform) {
        position = initPosition;
        standStartTime = TimeUtils.nanoTime();
        velocity = new Vector2();
        lastFramePosition = new Vector2(0, 0);
        this.level = level;
+       this.platform = platform;
 
     }
-
     public void render(SpriteBatch batch) {
         //Default value
         TextureRegion region;
@@ -54,11 +55,19 @@ public class Knight {
         region = Assets.instance.knightAssets.knightRunningRight.getKeyFrame(standTimeSeconds);
         batch.draw(region, position.x, position.y);
     }
+    //Knight Rectangle
+    public Rectangle getBounds() {
+        return new Rectangle(position.x, position.y, 16, 16);
+    }
 
     public void update(float delta, Array<Platform> platforms) {
         lastFramePosition.set(position);
-        velocity.y -= Constant.GRAVITY_CONSTANT;
         position.mulAdd(velocity, delta);
+        moveLeft(delta);
+        if(position.x < platform.left){
+            velocity.y -= Constant.GRAVITY_CONSTANT;
+
+        }
 
     }
 

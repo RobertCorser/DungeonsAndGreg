@@ -26,13 +26,14 @@ public class Level {
 
     public Array<Projectile> projectiles;
     public Array<Platform> platforms;
+    public Array<Knight> knights;
 
     public Level() {
         viewport = new ExtendViewport(Constant.WORLD_SIZE, Constant.WORLD_SIZE);
         greg = new Greg(new Vector2(0, 0), this);
 
 
-        knight1 = new Knight(new Vector2(40, 60), this);
+        knight1 = new Knight(new Vector2(40, 60), this, Platform);
 
 
         background = new Background();
@@ -40,8 +41,9 @@ public class Level {
         platforms = new Array<Platform>();
 
         platforms.add(new Platform(40, 40, 20, 20));
-        platforms.add(new Platform(0, 0, 100, 20));
+        platforms.add(new Platform(0, 0, 30, 20));
 
+        platforms.add(new Platform (60, 55, 20, 20));
 
         projectiles = new Array<Projectile>();
 

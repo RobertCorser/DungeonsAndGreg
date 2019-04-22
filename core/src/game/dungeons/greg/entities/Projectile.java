@@ -2,6 +2,7 @@ package game.dungeons.greg.entities;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 import game.dungeons.greg.Level;
@@ -34,7 +35,9 @@ public class Projectile {
                 break;
         }
     }
-
+    public Rectangle getBounds() {
+        return new Rectangle(position.x, position.y, 3, 3);
+    }
     public void render(SpriteBatch batch) {
         TextureRegion region = Assets.instance.projectileAssets.bullet;
         Utils.drawTextureRegion(batch, region, position, Constant.BULLET_CENTER);

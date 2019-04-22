@@ -5,6 +5,7 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
@@ -56,6 +57,9 @@ public class Greg {
         standTimeSeconds = MathUtils.nanoToSec * (TimeUtils.nanoTime() - standStartTime);
         region = Assets.instance.gregAssets.gregStandingRight.getKeyFrame(standTimeSeconds);
         batch.draw(region, position.x, position.y);
+    }
+    public Rectangle getBounds() {
+        return new Rectangle(position.x, position.y, 16, 16);
     }
 
     public void update(float delta, Array<Platform> platforms) {
