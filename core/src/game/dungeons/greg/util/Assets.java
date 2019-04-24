@@ -54,9 +54,7 @@ public class Assets implements Disposable, AssetErrorListener {
         knightAssets = new KnightAssets(atlas);
         necroAssets = new NecroAssets(atlas);
         platformAssets = new PlatformAssets(atlas);
-
         backgroundAssets = new BackgroundAssets();
-
         projectileAssets = new ProjectileAssets(atlas);
 
     }
@@ -75,7 +73,6 @@ public class Assets implements Disposable, AssetErrorListener {
     public class GregAssets{
 
         public final Animation gregStandingRight;
-
         public final AtlasRegion gregStandingRight1;
         public final AtlasRegion gregStandingRight2;
         public final AtlasRegion gregStandingRight3;
@@ -106,8 +103,6 @@ public class Assets implements Disposable, AssetErrorListener {
         public final AtlasRegion knightStandingRight2;
         public final AtlasRegion knightStandingRight3;
 
-
-
         public final AtlasRegion knightRunningRight0;
         public final AtlasRegion knightRunningRight1;
         public final AtlasRegion knightRunningRight2;
@@ -115,6 +110,7 @@ public class Assets implements Disposable, AssetErrorListener {
         public final AtlasRegion knighthit0;
 
         public KnightAssets(TextureAtlas atlas){
+
             knightStandingRight0 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_0);
             knightStandingRight1 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_1);
             knightStandingRight2 = atlas.findRegion(Constant.KNIGHT_STANDING_RIGHT_2);
@@ -136,9 +132,6 @@ public class Assets implements Disposable, AssetErrorListener {
             Array<AtlasRegion> RunningRightAnimation = new Array<AtlasRegion>();
             RunningRightAnimation.addAll(knightRunningRight0, knightRunningRight1, knightRunningRight2, knightRunningRight3);
             knightRunningRight = new Animation(Constant.KNIGHT_ANIM_SPEED, RunningRightAnimation, PlayMode.LOOP);
-
-
-
 
         }
     }

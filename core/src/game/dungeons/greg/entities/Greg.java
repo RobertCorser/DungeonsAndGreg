@@ -116,6 +116,8 @@ public class Greg {
         if (Gdx.input.isKeyJustPressed(Input.Keys.X)) {
             shoot();
         }
+
+
         // Once greg is hit he gets sent back to the beginning of the level.
        if(isHIT == true){
             position = new Vector2(0, 0);
