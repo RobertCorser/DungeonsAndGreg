@@ -14,6 +14,7 @@ import game.dungeons.greg.entities.Platform;
 import game.dungeons.greg.entities.Projectile;
 import game.dungeons.greg.util.Assets;
 import game.dungeons.greg.util.Background;
+import game.dungeons.greg.util.ChaseCam;
 import game.dungeons.greg.util.Constant;
 import game.dungeons.greg.util.Enums;
 
@@ -21,6 +22,7 @@ public class GameScreen extends ScreenAdapter {
 
     private SpriteBatch batch;
     private Level level;
+    private ChaseCam chaseCam;
 
 
     @Override
@@ -29,6 +31,9 @@ public class GameScreen extends ScreenAdapter {
         Assets.instance.init(assetManager);
         batch = new SpriteBatch();
         level = new Level();
+        chaseCam = new ChaseCam();
+        chaseCam.camera = level.viewport.getCamera();
+        chaseCam.target = level.getGreg();
     }
 
     @Override
@@ -47,11 +52,13 @@ public class GameScreen extends ScreenAdapter {
 
     private void update(float delta) {
         level.update(delta);
+        chaseCam.update(delta);
     }
 
     @Override
     public void resize(int width, int height) {
         level.viewport.update(width, height, true);
+        chaseCam.camera = level.viewport.getCamera();
     }
 
 }
