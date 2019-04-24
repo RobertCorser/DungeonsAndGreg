@@ -36,6 +36,7 @@ public class Constant {
     public static final float GREG_JUMP_TIME = 0.1f;
     public static final float GREG_JUMP_SPEED = 200;
     public static final float GREG_STANCE_WIDTH = 14.0f;
+    public static final Vector2 KNOCKBACK_VELOCITY = new Vector2(GREG_MOVE_SPEED * 2, GREG_MOVE_SPEED * 2);
 
     //Knight's Constants
     public static final float KNIGHT_F_MOVE_SPEED = 20;
@@ -56,7 +57,26 @@ public class Constant {
 
 
     //Wizard Constants
+    public static final String WIZARD_STANDING_RIGHT_0 = "wizzard-m-idle-anim-right-f0";
+    public static final String WIZARD_STANDING_RIGHT_1 = "wizzard-m-idle-anim-right-f1";
+    public static final String WIZARD_STANDING_RIGHT_2 = "wizzard-m-idle-anim-right-f2";
+    public static final String WIZARD_STANDING_RIGHT_3 = "wizzard-m-idle-anim-right-f3";
 
+    public static final String WIZARD_STANDING_LEFT_0 = "wizzard-m-idle-anim-left-f0";
+    public static final String WIZARD_STANDING_LEFT_1 = "wizzard-m-idle-anim-left-f1";
+    public static final String WIZARD_STANDING_LEFT_2 = "wizzard-m-idle-anim-left-f2";
+    public static final String WIZARD_STANDING_LEFT_3 = "wizzard-m-idle-anim-left-f3";
+
+    public static final float WIZARD_ANIM_SPEED = 0.20f;
+
+    public static final float WIZARD_MOVEMENT_SPEED = 10;
+    public static final int WIZARD_HEALTH = 5;
+    public static final float WIZARD_COLLISION_RADIUS = 15;
+    public static final float WIZARD_SHOT_RADIUS = 17;
+
+
+    public static final String WIZARD_WEAPON_LEFT = "weapon-red-magic-staff-left";
+    public static final String WIZARD_WEAPON_RIGHT = "weapon-red-magic-staff-right";
 
     //Platform Constants
     public static final String PLATFORM_1 = "floor-1";

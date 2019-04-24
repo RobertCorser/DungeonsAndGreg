@@ -28,6 +28,7 @@ public class Assets implements Disposable, AssetErrorListener {
     public PlatformAssets platformAssets;
     public BackgroundAssets backgroundAssets;
     public ProjectileAssets projectileAssets;
+    public WizardAssets wizardAssets;
 
     private Assets() {
     }
@@ -53,6 +54,8 @@ public class Assets implements Disposable, AssetErrorListener {
         gregAssets = new GregAssets(atlas);
         knightAssets = new KnightAssets(atlas);
         necroAssets = new NecroAssets(atlas);
+        wizardAssets = new WizardAssets(atlas);
+
         platformAssets = new PlatformAssets(atlas);
 
         backgroundAssets = new BackgroundAssets();
@@ -129,6 +132,51 @@ public class Assets implements Disposable, AssetErrorListener {
         public NecroAssets(TextureAtlas atlas){
 
         }
+    }
+
+    public class WizardAssets{
+
+        public final AtlasRegion wizardStandingRight0;
+        public final AtlasRegion wizardStandingRight1;
+        public final AtlasRegion wizardStandingRight2;
+        public final AtlasRegion wizardStandingRight3;
+
+        public final AtlasRegion wizardStandingLeft0;
+        public final AtlasRegion wizardStandingLeft1;
+        public final AtlasRegion wizardStandingLeft2;
+        public final AtlasRegion wizardStandingLeft3;
+
+        public final AtlasRegion wizardWeaponLeft;
+        public final AtlasRegion wizardWeaponRight;
+
+        public final Animation wizardStandingRight;
+        public final Animation wizardStandingLeft;
+
+        public WizardAssets(TextureAtlas atlas){
+
+            wizardWeaponLeft = atlas.findRegion(Constant.WIZARD_WEAPON_LEFT);
+            wizardWeaponRight = atlas.findRegion(Constant.WIZARD_WEAPON_RIGHT);
+
+            wizardStandingRight0 = atlas.findRegion(Constant.WIZARD_STANDING_RIGHT_0);
+            wizardStandingRight1 = atlas.findRegion(Constant.WIZARD_STANDING_RIGHT_1);
+            wizardStandingRight2 = atlas.findRegion(Constant.WIZARD_STANDING_RIGHT_2);
+            wizardStandingRight3 = atlas.findRegion(Constant.WIZARD_STANDING_RIGHT_3);
+
+            wizardStandingLeft0 = atlas.findRegion(Constant.WIZARD_STANDING_LEFT_0);
+            wizardStandingLeft1 = atlas.findRegion(Constant.WIZARD_STANDING_LEFT_1);
+            wizardStandingLeft2 = atlas.findRegion(Constant.WIZARD_STANDING_LEFT_2);
+            wizardStandingLeft3 = atlas.findRegion(Constant.WIZARD_STANDING_LEFT_3);
+
+            Array<AtlasRegion> standingRightAnimation = new Array<AtlasRegion>();
+            standingRightAnimation.addAll(wizardStandingRight0, wizardStandingRight1, wizardStandingRight2, wizardStandingRight3);
+            wizardStandingRight = new Animation(Constant.WIZARD_ANIM_SPEED, standingRightAnimation, PlayMode.LOOP);
+
+            Array<AtlasRegion> standingLeftAnimation = new Array<AtlasRegion>();
+            standingLeftAnimation.addAll(wizardStandingLeft0, wizardStandingLeft1, wizardStandingLeft2, wizardStandingLeft3);
+            wizardStandingLeft = new Animation(Constant.WIZARD_ANIM_SPEED, standingLeftAnimation, PlayMode.LOOP);
+
+        }
+
     }
 
     public class PlatformAssets{

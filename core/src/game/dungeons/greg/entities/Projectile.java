@@ -13,15 +13,15 @@ import game.dungeons.greg.util.Utils;
 public class Projectile {
 
     private final Enums.Direction direction;
-    private final Level level;
     public boolean active;
     private Vector2 position;
+    Object entity;
 
-    public Projectile(Level level, Vector2 position, Enums.Direction direction) {
-        this.level = level;
+    public Projectile(Vector2 position, Enums.Direction direction, Object entity) {
         this.position = position;
         this.direction = direction;
         active = true;
+        this.entity = entity;
     }
 
     public void update(float delta) {
@@ -36,7 +36,16 @@ public class Projectile {
     }
 
     public void render(SpriteBatch batch) {
-        TextureRegion region = Assets.instance.projectileAssets.bullet;
+        //Default value
+        TextureRegion region = null;
+
+        if(entity instanceof Greg){
+            region = Assets.instance.projectileAssets.bullet;
+        }
+        else{
+            region = Assets.instance.wizardAssets.wizardWeaponLeft;
+        }
+
         Utils.drawTextureRegion(batch, region, position, Constant.BULLET_CENTER);
     }
 }

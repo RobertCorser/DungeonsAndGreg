@@ -9,6 +9,7 @@ import com.badlogic.gdx.utils.viewport.ExtendViewport;
 import game.dungeons.greg.entities.Greg;
 import game.dungeons.greg.entities.Platform;
 import game.dungeons.greg.entities.Projectile;
+import game.dungeons.greg.entities.Wizard;
 import game.dungeons.greg.util.Background;
 import game.dungeons.greg.util.Constant;
 import game.dungeons.greg.util.Enums;
@@ -20,6 +21,10 @@ public class Level {
 
     public ExtendViewport viewport;
 
+    private Platform wizardPlatform;
+
+    private Wizard wizard;
+
     public Array<Projectile> projectiles;
     public Array<Platform> platforms;
 
@@ -30,20 +35,29 @@ public class Level {
 
         platforms = new Array<Platform>();
         platforms.add(new Platform(40, 40, 20, 20));
-
         platforms.add(new Platform(60, 80, 20, 20));
 
+        wizardPlatform = new Platform(100, 40, 20, 20);
+
+        platforms.add(wizardPlatform);
         projectiles = new Array<Projectile>();
+
+        wizard = new Wizard(wizardPlatform, this);
 
 
     }
 
-    public void spawnProjectile() {
-        projectiles.add(new Projectile(null, greg.getPosition().cpy(), Enums.Direction.RIGHT));
+    public void spawnProjectile(Greg greg){
+        projectiles.add(new Projectile(greg.getPosition().cpy(), greg.getDirection(), greg));
+    }
+
+    public void spawnProjectile(Wizard wizard){
+        projectiles.add(new Projectile(wizard.getPosition().cpy(), wizard.getDirection(), wizard));
     }
 
     public void update(float delta) {
         greg.update(delta, platforms);
+        wizard.update(delta);
 
 
         for (int x = 0; x < projectiles.size; x++) {
@@ -70,8 +84,14 @@ public class Level {
 
         greg.render(batch);
 
+        wizard.render(batch);
+
         batch.end();
 
+    }
+
+    public Greg getGreg(){
+        return greg;
     }
 
 }

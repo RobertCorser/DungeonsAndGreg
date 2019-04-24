@@ -111,7 +111,7 @@ public class Greg {
     }
 
     private void shoot() {
-        level.spawnProjectile();
+        level.spawnProjectile(this);
     }
 
     private void moveLeft(float delta) {
@@ -172,8 +172,24 @@ public class Greg {
 
     }
 
+    private void recoilFromEnemy(Direction direction) {
+
+        jumpState = JumpState.RECOILING;
+        velocity.y = Constant.KNOCKBACK_VELOCITY.y;
+
+        if (direction == Direction.LEFT) {
+            velocity.x = -Constant.KNOCKBACK_VELOCITY.x;
+        } else {
+            velocity.x = Constant.KNOCKBACK_VELOCITY.x;
+        }
+    }
+
     public Vector2 getPosition() {
         return position;
+    }
+
+    public Direction getDirection(){
+        return facing;
     }
 
 
