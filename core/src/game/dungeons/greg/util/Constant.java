@@ -32,14 +32,19 @@ public class Constant {
     public static final String GREG_RUNNING_RIGHT_3 = "greg-run-right-3";
 
     public static final float GREG_MOVE_SPEED = 30;
-    public static final float GREG_ANIM_SPEED = 0.20f;
+    public static final float GREG_ANIM_SPEED = 0.25f;
     public static final float GREG_JUMP_TIME = 0.1f;
     public static final float GREG_JUMP_SPEED = 200;
     public static final float GREG_STANCE_WIDTH = 14.0f;
     public static final Vector2 KNOCKBACK_VELOCITY = new Vector2(GREG_MOVE_SPEED * 2, GREG_MOVE_SPEED * 2);
 
     //Knight's Constants
-    public static final float KNIGHT_F_MOVE_SPEED = 20;
+    public static final float KNIGHT_F_MOVE_SPEED = 22;
+    public static final float KNIGHT_ANIM_SPEED = 0.20f;
+    public static final float KNIGHT_HIT_DURATION = 1.5f;
+    public static final float KNIGHT_STANCE_WIDTH = 14.0f;
+
+
     public static final String KNIGHT_STANDING_RIGHT_0 = "knight_f_idle_anim_f0";
     public static final String KNIGHT_STANDING_RIGHT_1 = "knight_f_idle_anim_f1";
     public static final String KNIGHT_STANDING_RIGHT_2 = "knight_f_idle_anim_f2";

@@ -62,9 +62,6 @@ public class Assets implements Disposable, AssetErrorListener {
 
         projectileAssets = new ProjectileAssets(atlas);
 
-
-
-
     }
 
     @Override
@@ -102,10 +99,17 @@ public class Assets implements Disposable, AssetErrorListener {
 
     public class KnightAssets{
 
+        //standing, running and hit animations
+        public final Animation knightStandingRight;
+        public final Animation knightRunningRight;
+        public final Animation knightHit;
+
         public final AtlasRegion knightStandingRight0;
         public final AtlasRegion knightStandingRight1;
         public final AtlasRegion knightStandingRight2;
         public final AtlasRegion knightStandingRight3;
+
+
 
         public final AtlasRegion knightRunningRight0;
         public final AtlasRegion knightRunningRight1;
@@ -123,9 +127,24 @@ public class Assets implements Disposable, AssetErrorListener {
             knightRunningRight2 = atlas.findRegion(Constant.KNIGHT_RUN_RIGHT_2);
             knightRunningRight3 = atlas.findRegion(Constant.KNIGHT_RUN_RIGHT_3);
             knighthit0 = atlas.findRegion(Constant.KNIGHT_HIT);
+
+            Array<AtlasRegion> KnightHitAnimation = new Array<AtlasRegion>();
+            KnightHitAnimation.addAll(knighthit0);
+            knightHit = new Animation(Constant.KNIGHT_HIT_DURATION, KnightHitAnimation, PlayMode.LOOP);
+
+            Array<AtlasRegion> standingRightKnightAnimation = new Array<AtlasRegion>();
+            standingRightKnightAnimation.addAll(knightStandingRight0, knightStandingRight1, knightStandingRight2, knightStandingRight3);
+            knightStandingRight = new Animation(Constant.KNIGHT_ANIM_SPEED, standingRightKnightAnimation, PlayMode.LOOP);
+
+            Array<AtlasRegion> RunningRightAnimation = new Array<AtlasRegion>();
+            RunningRightAnimation.addAll(knightRunningRight0, knightRunningRight1, knightRunningRight2, knightRunningRight3);
+            knightRunningRight = new Animation(Constant.KNIGHT_ANIM_SPEED, RunningRightAnimation, PlayMode.LOOP);
+
+
+
+
         }
     }
-
     //Necromancer
     public class NecroAssets {
 

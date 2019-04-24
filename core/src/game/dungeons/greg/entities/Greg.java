@@ -5,6 +5,7 @@ import com.badlogic.gdx.Input;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.TimeUtils;
@@ -20,6 +21,8 @@ import game.dungeons.greg.util.Utils;
 
 public class Greg {
 
+    //TODO dying, ammo
+
     private Vector2 position;
     private Vector2 lastFramePosition;
     private Vector2 velocity;
@@ -31,7 +34,7 @@ public class Greg {
     private float standTimeSeconds;
 
     private long jumpStartTime;
-    private float jumtTimeSeconds;
+    private float jumpTimeSeconds;
 
     private Direction facing;
     private WalkState walkState;
@@ -51,16 +54,22 @@ public class Greg {
     public void render(SpriteBatch batch) {
         //Default value
         TextureRegion region;
-
         standTimeSeconds = MathUtils.nanoToSec * (TimeUtils.nanoTime() - standStartTime);
         region = Assets.instance.gregAssets.gregStandingRight.getKeyFrame(standTimeSeconds);
-
-
         batch.draw(region, position.x, position.y);
     }
 
-    public void update(float delta, Array<Platform> platforms) {
+    //Collision Detection
+    public Rectangle getBounds() {
+        return new Rectangle(position.x, position.y, 16, 16);
+    }
+    boolean isHIT = false;
 
+    public void setHit(){
+        isHIT = true;
+    }
+
+    public void update(float delta, Array<Platform> platforms) {
         lastFramePosition.set(position);
         velocity.y -= Constant.GRAVITY_CONSTANT;
         position.mulAdd(velocity, delta);
@@ -107,7 +116,11 @@ public class Greg {
         if (Gdx.input.isKeyJustPressed(Input.Keys.X)) {
             shoot();
         }
-
+        // Once greg is hit he gets sent back to the beginning of the level.
+       if(isHIT == true){
+            position = new Vector2(0, 0);
+            isHIT = false;
+        }
     }
 
     private void shoot() {
