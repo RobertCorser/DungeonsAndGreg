@@ -18,5 +18,8 @@ public class Enums {
         GROUNDED,
         RECOILING
     }
+    public enum HitState{
+        HIT
+    }
 
 }
