@@ -51,14 +51,29 @@ public class Knight {
     public void render(SpriteBatch batch) {
         //Default value
         TextureRegion region;
+        TextureRegion hitRegion;
         standTimeSeconds = MathUtils.nanoToSec * (TimeUtils.nanoTime() - standStartTime);
         region = Assets.instance.knightAssets.knightRunningRight.getKeyFrame(standTimeSeconds);
         batch.draw(region, position.x, position.y);
-    }
+        if(isHIT = true) {
+
+
+            hitRegion = Assets.instance.knightAssets.knighthit0;
+            batch.draw(hitRegion, position.x, position.y);
+        }
+        }
+
     //Knight Rectangle
     public Rectangle getBounds() {
         return new Rectangle(position.x, position.y, 16, 16);
     }
+
+    boolean isHIT = false;
+
+    public void setHit(){
+        isHIT = true;
+    }
+
 
     public void update(float delta, Array<Platform> platforms) {
         lastFramePosition.set(position);

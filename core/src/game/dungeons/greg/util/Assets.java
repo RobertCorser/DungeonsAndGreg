@@ -127,7 +127,7 @@ public class Assets implements Disposable, AssetErrorListener {
 
             Array<AtlasRegion> KnightHitAnimation = new Array<AtlasRegion>();
             KnightHitAnimation.addAll(knighthit0);
-            knightHit = new Animation(Constant.KNIGHT_HIT_DURATION, KnightHitAnimation, PlayMode.NORMAL);
+            knightHit = new Animation(Constant.KNIGHT_HIT_DURATION, KnightHitAnimation, PlayMode.LOOP);
 
             Array<AtlasRegion> standingRightKnightAnimation = new Array<AtlasRegion>();
             standingRightKnightAnimation.addAll(knightStandingRight0, knightStandingRight1, knightStandingRight2, knightStandingRight3);

@@ -38,6 +38,7 @@ public class Projectile {
     public Rectangle getBounds() {
         return new Rectangle(position.x, position.y, 3, 3);
     }
+
     public void render(SpriteBatch batch) {
         TextureRegion region = Assets.instance.projectileAssets.bullet;
         Utils.drawTextureRegion(batch, region, position, Constant.BULLET_CENTER);

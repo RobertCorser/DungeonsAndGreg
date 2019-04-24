@@ -33,8 +33,6 @@ public class Level {
         greg = new Greg(new Vector2(0, 0), this);
 
 
-        knight1 = new Knight(new Vector2(40, 60), this, Platform);
-
 
         background = new Background();
 
@@ -45,6 +43,8 @@ public class Level {
 
         platforms.add(new Platform (60, 55, 20, 20));
 
+        knight1 = new Knight(new Vector2(40, 60), this, platforms.get(0));
+
         projectiles = new Array<Projectile>();
 
 
@@ -53,6 +53,23 @@ public class Level {
     public void spawnProjectile() {
         projectiles.add(new Projectile(null, greg.getPosition().cpy(), Enums.Direction.RIGHT));
     }
+    //Collision method
+    public void checkCollisions(){
+        if(knight1.getBounds().overlaps(greg.getBounds())){
+            knight1.setHit();
+        }
+
+        //after bobby finishes projectile cleanup
+      //if(knight1.getBounds().overlaps(projectiles.)){
+
+       //}
+    if(greg.getBounds().overlaps(knight1.getBounds())){
+        greg.setHit();
+    }
+
+
+    }
+
 
     public void update(float delta) {
         greg.update(delta, platforms);

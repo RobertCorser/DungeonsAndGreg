@@ -58,12 +58,18 @@ public class Greg {
         region = Assets.instance.gregAssets.gregStandingRight.getKeyFrame(standTimeSeconds);
         batch.draw(region, position.x, position.y);
     }
+
+    //Collision Detection
     public Rectangle getBounds() {
         return new Rectangle(position.x, position.y, 16, 16);
     }
+    boolean isHIT = false;
+
+    public void setHit(){
+        isHIT = true;
+    }
 
     public void update(float delta, Array<Platform> platforms) {
-
         lastFramePosition.set(position);
         velocity.y -= Constant.GRAVITY_CONSTANT;
         position.mulAdd(velocity, delta);
@@ -110,7 +116,11 @@ public class Greg {
         if (Gdx.input.isKeyJustPressed(Input.Keys.X)) {
             shoot();
         }
-
+        // Once greg is hit he gets sent back to the beginning of the level.
+       if(isHIT == true){
+            position = new Vector2(0, 0);
+            isHIT = false;
+        }
     }
 
     private void shoot() {
